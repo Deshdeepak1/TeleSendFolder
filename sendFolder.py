@@ -1,21 +1,12 @@
 import os
+import asyncio
+from pyrogram import Client
+from telegram_upload import files
 
 API_ID=os.environ['API_ID']
 API_HASH=os.environ['API_HASH']
 
-try:
-  import asyncio
-except:
-  os.system('pip3 install -U asyncio')
-  import asyncio
 
-try:
-  from pyrogram import Client
-  from telegram_upload import files
-except:
-  os.system('pip3 install -U https://github.com/pyrogram/pyrogram/archive/asyncio.zip tgcrypto telegram-upload')
-  from pyrogram import Client
-  from telegram_upload import files
 
 loop=asyncio.get_event_loop()
 
@@ -42,6 +33,12 @@ async def sendVid(path):
   print(atr[0])
   await client.send_video(username,path,caption=caption,duration=d,width=w,height=h,thumb=thumb,supports_streaming=True)
 
+async def sendDoc(path):
+    if files.get_file_mime(path)=='video':
+        await sendVid(path)
+    else:
+        await client.send_document(username,path)
+
 path=input('Enter path : ')
 username = input("Enter phone no. , channel link, group link ,etc. : ")
 
@@ -61,7 +58,7 @@ def upload (path):
           loop.run_until_complete(sendMsg(p))
           print(path)
   else:
-    loop.run_until_complete(sendVid(path))
+    loop.run_until_complete(sendDoc(path))
     print(path)
 
 replacer=os.path.dirname(path)+'/'

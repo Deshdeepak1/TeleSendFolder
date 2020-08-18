@@ -1,0 +1,5 @@
+asyncio
+https://github.com/pyrogram/pyrogram/archive/asyncio.zip
+telegram_upload
+ffmpeg
+
