@@ -1,10 +1,13 @@
 import os
 
+API_ID=os.environ['API_ID']
+API_HASH=os.environ['API_HASH']
+
 try:
   import asyncio
 except:
   os.system('pip3 install -U asyncio')
-  import os
+  import asyncio
 
 try:
   from pyrogram import Client
@@ -16,8 +19,8 @@ except:
 
 loop=asyncio.get_event_loop()
 
-api_id = 1323261
-api_hash = "695d0d4bf6f348f82d29e41eea411823"
+api_id = int(API_ID)
+api_hash = API_HASH
 client = Client('my_account',api_id,api_hash)
 
 async def go():
