@@ -1,2 +1,2 @@
 # teleprojs
-Teleprojs
+Telegram projects built in python.
