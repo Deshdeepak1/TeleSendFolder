@@ -14,7 +14,7 @@ Telegram projects built in python.
  1. git clone https://github.com/Deshdeepak1/teleprojs.git or download zip
  2. cd teleprojs or move inside folder
  3. Set environment variables API_ID & API_HASH
- 4. First time: Start win10.PS1 with powershell
+ 4. First time: Start win10.PS1 with powershell & administrator privilege.
  5. Next time: Start sendFolder.py
 
 # On error.
