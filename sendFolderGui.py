@@ -10,7 +10,6 @@ except:
 
 from tkinter import messagebox , filedialog
 from pyrogram import Client
-from pyrogram.api.functions.channels import  GetAdminedPublicChannels
 
 API_ID=os.environ['API_ID']
 API_HASH=os.environ['API_HASH']
@@ -41,17 +40,26 @@ class MainPage(Frame):
         self.pathBtn = Button(self.f1,font='arial 14',text='Browse',width=10,highlightbackground='black',bg='light blue',command=self.chooseFolder)
         self.pathBtn.pack(side=LEFT,padx=5)
 
-        users=[]
-        groups=[]
         channels=[]
+        groups=[]
+        users=[]
         
-        #async def dial():
-        #    async for dialog in client.iter_dialogs():
-        #        if dialog.chat.type=="channel":
-        #            print(dialog.chat.title,dialog.chat)
-        #loop.run_until_complete(dial())
-        channels=GetAdminedPublicChannels()
-        print(channels)
+        async def dial():
+            async for dialog in client.iter_dialogs():
+                if dialog.chat.type=="channel"  :
+                    channels.append(dialog.chat)
+                elif dialog.chat.type in ["group","supergroup"] :
+                    groups.append(dialog.chat)
+                elif dialog.chat.type == "private" and dialog.chat.first_name!=None:
+                    users.append(dialog.chat)
+        loop.run_until_complete(dial())
+        
+        self.f2 = Frame(self)
+        self.f2.pack(fill=X,pady=10)
+
+        self.meRb = Radiobutton(self.f2,text="ME")
+        self.pack(fill=BOTH)
+        
 
 class App(Tk):
 
