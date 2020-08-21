@@ -28,7 +28,7 @@ class MainPage(Frame):
         self.config(bg='dark grey')
 
         self.f1 = Frame(self)
-        self.f1.pack(fill=X,pady=30)
+        self.f1.pack(fill=X,pady=10)
 
         self.pathL = Label(self.f1,text='Enter path: ',font='arial 14')
         self.pathL.pack(side=LEFT)
@@ -55,11 +55,40 @@ class MainPage(Frame):
         loop.run_until_complete(dial())
         
         self.f2 = Frame(self)
-        self.f2.pack(fill=X,pady=10)
+        self.f2.pack(fill=X,pady=2)
 
-        self.meRb = Radiobutton(self.f2,text="ME")
-        self.pack(fill=BOTH)
+        self.meRb = Radiobutton(self.f2,text="ME",font='veranda 14')
+        self.meRb.pack(fill=BOTH)
+
+        self.f3 = Frame(self)
+        self.f3.pack(fill=BOTH)
+
+        self.f3a = Frame(self.f3)
+        self.f3a.pack(fill=X,side=TOP)
         
+        self.f3a1 = Frame(self.f3a)
+        scroll1 = Scrollbar(self.f3a1)
+        scroll1.pack(side=RIGHT,fill=Y)
+        self.f3a1.config(yscrollcommand=scroll1.set)
+        self.f3a1.pack(fill=Y,side=LEFT)
+        
+        self.f3a2 = Frame(self.f3a)
+        scroll2 = Scrollbar(self.f3a2)
+        scroll2.pack(side=RIGHT,fill=Y)
+        self.f3a1.config(yscrollcommand=scroll2.set)
+        self.f3a2.pack(fill=Y,side=LEFT)
+        
+        self.f3a3 = Frame(self.f3a)
+        scroll3 = Scrollbar(self.f3a3)
+        scroll3.pack(side=RIGHT,fill=Y)
+        self.f3a1.config(yscrollcommand=scroll3.set)
+        self.f3a3.pack(fill=Y,side=LEFT)
+
+        self.f3b = Frame(self.f3)
+        self.f3b.pack(fill=X,pady=3,side=BOTTOM)
+
+        self.sendB = Button(self.f3b,text='Send',font='helvetica 16',bg='light blue',highlightbackground='grey',fg='green',width=10)
+        self.sendB.pack(pady=5)
 
 class App(Tk):
 
