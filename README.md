@@ -1,13 +1,14 @@
 # Teleprojs
 Telegram projects built in python.
 
-# Instructions for termux & ubuntu.
+# Instructions for termux & linux.
  1. git clone https://github.com/Deshdeepak1/teleprojs.git
  2. cd teleprojs
- 3. chmod  ./ubuntu_termux.sh ./ubuntu_termux_py.sh
+ 3. chmod  ./sendFolder.sh ./sendFolderPy.sh
  4. Set environment variables API_ID & API_HASH
- 5. First time: ./ubuntu_termux.sh 
- 6. Next time: ./ubuntu_termux_py.sh 
+ 5. First time: ./sendFolder.sh 
+ 6. Next time: ./sendFolderPy.sh 
+ 7. Give root/sudo privilege if required
 
 
 # Instructions for windows.
@@ -18,4 +19,6 @@ Telegram projects built in python.
  5. Next time: Start sendFolder.py
 
 # On error.
-	Find how to install ffmpeg on your os.
+	If authorization error occurs, delete all(which are corrupted/unauthorised) session files.
+	Else if tkinter error, find how to install tkinter on your os.
+	Else if ffmpeg error, find how to install ffmpeg on your os.
