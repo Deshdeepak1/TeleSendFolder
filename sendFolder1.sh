@@ -10,6 +10,9 @@ then
     python3 sendFolder.py
 elif [ $choice = 2 ]
 then
+    sudo apt-get install python3-tk
+    sudo yum install python3-tk
+    apt-get install python-tkinter
     python3 sendFolderGui.py
 else
     printf "Invalid choice\n"

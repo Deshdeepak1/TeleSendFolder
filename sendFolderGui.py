@@ -1,15 +1,7 @@
 import os
 import asyncio
 
-try:
-    from tkinter import *
-except:
-    os.system('sudo apt-get install python3-tk')
-    os.system('sudo yum install python3-tk')
-    os.system('apt-get install python-tkinter')
-    from tkinter import *
-
-
+from tkinter import *
 from tkinter import messagebox , filedialog
 from pyrogram import Client
 from telegram_upload import files
