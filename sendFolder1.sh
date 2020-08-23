@@ -1,6 +1,10 @@
 #!/bin/bash
-printf "1.Cli\n2.Gui\nEnter choice: " 
+sudo apt install ffmpeg
+apt install ffmpeg
+sudo yum install ffmpeg
+pip3 install -U -r requirements.txt
 read choice
+echo $choice
 if [ $choice = 1 ]
 then
     python3 sendFolder.py

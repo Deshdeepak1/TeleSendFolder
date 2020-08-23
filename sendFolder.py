@@ -95,7 +95,7 @@ def main():
     name=me['first_name']+' '+me['last_name'] 
   except:
     name=me['first_name']
-  wel="Logged in as: "+name+' ('+me['phone_number']+')\n'
+  wel="\nLogged in as: "+name+' ('+me['phone_number']+')\n'
   print(wel)
   path=input('Enter path : ')
   username = input("Enter phone no. , channel link, group link ,etc. : ")
