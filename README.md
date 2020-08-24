@@ -1,9 +1,9 @@
-# Teleprojs
-Telegram projects built in python.
+# TeleSendFolder
+ Telegram folder sender built in python.
 
 # Instructions for termux & linux.
- 1. git clone https://github.com/Deshdeepak1/teleprojs.git
- 2. cd teleprojs
+ 1. git clone https://github.com/Deshdeepak1/TeleSendFolder.git
+ 2. cd TeleSendFolder
  3. chmod  ./sendFolder.sh ./sendFolder1.sh
  4. Set environment variables API_ID & API_HASH
  5. First time: ./sendFolder1.sh 
@@ -12,8 +12,8 @@ Telegram projects built in python.
 
 
 # Instructions for windows.
- 1. git clone https://github.com/Deshdeepak1/teleprojs.git or download zip
- 2. cd teleprojs or move inside folder
+ 1. git clone https://github.com/Deshdeepak1/TeleSendFolder.git or download zip
+ 2. cd TeleSendFolder or move inside folder
  3. Set environment variables API_ID & API_HASH
  4. First time: Start win10.PS1 with powershell & administrator privilege.
  5. Next time: Start sendFolder.py or sendFolderGui.py
