@@ -16,9 +16,9 @@
  2. cd TeleSendFolder or move inside folder
  3. Set environment variables API_ID & API_HASH
  4. First time:
- 	a. Start powershell as administrator 
-	b. Set-ExecutionPolicy unrestricted
-	c. .\win10.PS1
+   a. Start powershell as administrator 
+   b. Set-ExecutionPolicy unrestricted
+   c. .\win10.PS1
  5. Next time: Start sendFolder.py or sendFolderGui.py
 
 # On error.
