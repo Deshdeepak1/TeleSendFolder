@@ -8,7 +8,7 @@
  4. Set environment variables API_ID & API_HASH
  5. First time: ./sendFolder1.sh 
  6. Next time: ./sendFolder.sh 
- 7. Give root/sudo privilege if required
+ 7. Give root/sudo privilege if required.
 
 
 # Instructions for windows.
