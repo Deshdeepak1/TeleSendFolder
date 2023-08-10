@@ -8,14 +8,14 @@
  4. Set environment variables API_ID & API_HASH
  5. First time: ./sendFolder1.sh 
  6. Next time: ./sendFolder.sh 
- 7. Give root/sudo privilege if required
+ 7. Give root/sudo privilege if required.
 
 
 # Instructions for windows.
  1. git clone https://github.com/Deshdeepak1/TeleSendFolder.git or download zip
  2. cd TeleSendFolder or move inside folder
- 3. Set environment variables API_ID & API_HASH
- 4. First time:
+ 3. Set environment variables API_ID & API_HASH.
+ 4. First time:-
    a. Start powershell as administrator 
    b. Set-ExecutionPolicy unrestricted
    c. .\win10.PS1
