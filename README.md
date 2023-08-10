@@ -14,7 +14,7 @@
 # Instructions for windows.
  1. git clone https://github.com/Deshdeepak1/TeleSendFolder.git or download zip
  2. cd TeleSendFolder or move inside folder
- 3. Set environment variables API_ID & API_HASH
+ 3. Set environment variables API_ID & API_HASH.
  4. First time:
    a. Start powershell as administrator 
    b. Set-ExecutionPolicy unrestricted
